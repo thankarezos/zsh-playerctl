@@ -1,4 +1,4 @@
-p() {
+pct() {
   case "$1" in
     ""|p|toggle|t|pp)
       playerctl play-pause
@@ -25,8 +25,8 @@ p() {
       playerctl metadata
       ;;
     *)
-      echo "Usage: p [play|pause|toggle|next|back|stop|status|info]"
-      echo "Short: p | p p | p t | p n | p b | p s | p i | p x"
+      echo "Usage: pct [play|pause|toggle|next|back|stop|status|info]"
+      echo "Short: pct | pct p | pct t | pct n | pct b | pct s | pct i | pct x"
       return 1
       ;;
   esac
