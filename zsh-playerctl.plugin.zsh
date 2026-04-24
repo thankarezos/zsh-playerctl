@@ -1,31 +1,32 @@
 p() {
   case "$1" in
-    play|resume)
+    ""|p|toggle|t|pp)
+      playerctl play-pause
+      ;;
+    play|pl)
       playerctl play
       ;;
-    pause)
+    pause|pa)
       playerctl pause
-      ;;
-    toggle|pp)
-      playerctl play-pause
       ;;
     next|n)
       playerctl next
       ;;
-    back|prev|previous|b)
+    back|b|prev|previous)
       playerctl previous
       ;;
-    stop)
+    stop|x)
       playerctl stop
       ;;
-    status|s)
+    status|s|st)
       playerctl status
       ;;
-    info|meta|now)
+    info|i|meta|now)
       playerctl metadata
       ;;
     *)
-      echo "Usage: p {play|pause|toggle|next|back|stop|status|info}"
+      echo "Usage: p [play|pause|toggle|next|back|stop|status|info]"
+      echo "Short: p | p p | p t | p n | p b | p s | p i | p x"
       return 1
       ;;
   esac
