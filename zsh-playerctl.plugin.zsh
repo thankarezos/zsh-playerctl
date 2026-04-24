@@ -3,12 +3,6 @@ pct() {
     ""|p|toggle|t|pp)
       playerctl play-pause
       ;;
-    play|pl)
-      playerctl play
-      ;;
-    pause|pa)
-      playerctl pause
-      ;;
     next|n)
       playerctl next
       ;;
@@ -25,16 +19,14 @@ pct() {
       playerctl metadata
       ;;
     *)
-      echo "Usage: pct [play|pause|toggle|next|back|stop|status|info]"
+      echo "Usage: pct [toggle|next|back|stop|status|info]"
       echo "Short: pct | pct p | pct t | pct n | pct b | pct s | pct i | pct x"
       return 1
       ;;
   esac
 }
 
-alias pctp='playerctl play'
-alias pcta='playerctl pause'
-alias pctt='playerctl play-pause'
+alias pctp='playerctl play-pause'
 alias pctn='playerctl next'
 alias pctb='playerctl previous'
 alias pctx='playerctl stop'
