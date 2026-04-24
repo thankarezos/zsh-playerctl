@@ -31,3 +31,12 @@ pct() {
       ;;
   esac
 }
+
+alias pctp='playerctl play'
+alias pcta='playerctl pause'
+alias pctt='playerctl play-pause'
+alias pctn='playerctl next'
+alias pctb='playerctl previous'
+alias pctx='playerctl stop'
+alias pcts='playerctl status'
+alias pcti='playerctl metadata'
